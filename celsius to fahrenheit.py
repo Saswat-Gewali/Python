@@ -1,9 +1,14 @@
-# Python Program to convert temperature in celsius to fahrenheit
-# change this value for a different result
-celsius = 37.5
+# Celsius to Fahrenheit converter
 
-# calculate fahrenheit
-
-print('%0.1f degree Celsius is equal to %0.1f degree Fahrenheit' %(celsius,fahrenheit))
+def celsius_to_fahrenheit(celsius):
+    fahrenheit = (celsius * 9/5) + 32
+    return fahrenheit
 
 
+celsius = float(input("Enter temperature in Celsius: "))
+
+
+fahrenheit = celsius_to_fahrenheit(celsius)
+
+
+print(f"{celsius}°C is equal to {fahrenheit}°F")
