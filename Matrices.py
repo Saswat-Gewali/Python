@@ -1,4 +1,4 @@
-//Program to multiply two matrices using nested loops
+#Program to multiply two matrices using nested loops
 
 # 3x3 matrix
 X = [[12,7,3],
@@ -12,3 +12,15 @@ Y = [[5,8,1,2],
 result = [[0,0,0,0],
          [0,0,0,0],
          [0,0,0,0]]
+
+def mul(X,Y):
+    # iterate through rows of X
+    for i in range(len(X)):
+        # iterate through columns of Y
+        for j in range(len(Y[0])):
+            # iterate through rows of Y
+            for k in range(len(Y)):
+                result[i][j] += X[i][k] * Y[k][j]
+
+    print(result)
+mul(X,Y)
